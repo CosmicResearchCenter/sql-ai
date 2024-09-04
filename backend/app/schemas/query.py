@@ -5,5 +5,5 @@ class QueryRequset(BaseModel):
 
 class QueryResponse(BaseModel):
     code: int
-    data: List[Dict[str, Any]]
+    data: List[Dict]
     message: str

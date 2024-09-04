@@ -7,3 +7,11 @@ class SQLAnswer(BaseModel):
     explanation:str
 class SQLAnswes(BaseModel):
     answers:List[SQLAnswer]
+
+    def to_dict(self):
+        return [
+                {
+                    "sql_statement": answer.sql_statement,
+                    "explanation": answer.explanation
+                } for answer in self.answers]
+    
